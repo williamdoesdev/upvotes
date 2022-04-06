@@ -4,7 +4,7 @@ export async function register(user) {
     email: user.email,
     password: user.password,
   };
-  const res = await fetch("http://localhost:5000/api/users", {
+  const res = await fetch("http://localhost:5001/api/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export async function login(user) {
     email: user.email,
     password: user.password,
   };
-  const res = await fetch("http://localhost:5000/api/auth", {
+  const res = await fetch("http://localhost:5001/api/auth", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export async function login(user) {
 }
 
 export async function checkToken() {
-  const res = await fetch("http://localhost:5000/api/auth", {
+  const res = await fetch("http://localhost:5001/api/auth", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

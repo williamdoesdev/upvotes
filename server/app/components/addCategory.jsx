@@ -57,7 +57,7 @@ export default class AddTopic extends Form {
   }
 
   async handleSubmit() {
-    const res = await fetch("http://localhost:5000/api/categories", {
+    const res = await fetch("http://localhost:5001/api/categories", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
