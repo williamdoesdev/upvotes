@@ -64,7 +64,7 @@ export default class AddTopic extends Form {
     let payload = {};
     Object.assign(payload, this.state.formData);
     payload.category = this.props.categoryId;
-    const res = await fetch("http://localhost:5001/api/topics", {
+    const res = await fetch("https://williamdoes.dev/upvotes/api/topics", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
