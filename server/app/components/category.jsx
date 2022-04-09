@@ -17,7 +17,7 @@ export default class Category extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch("http://localhost:5001/api/topics");
+    const res = await fetch("http://54.89.224.32:5001/api/topics");
     let data = await res.json();
     data = data.filter((topic) => topic.category._id == this.state.categoryId);
     this.setState({ topics: data });
@@ -74,7 +74,7 @@ export default class Category extends Component {
   }
 
   async handleDelete(deleteId) {
-    await fetch(`http://localhost:5001/api/topics/${deleteId}`, {
+    await fetch(`http://54.89.224.32:5001/api/topics/${deleteId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

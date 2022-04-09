@@ -15,7 +15,7 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch("http://localhost:5001/api/categories");
+    const res = await fetch("http://54.89.224.32:5001/api/categories");
     const data = await res.json();
     this.setState({ categories: data });
   }
