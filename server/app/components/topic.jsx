@@ -86,7 +86,7 @@ export default class Topic extends Component {
     console.log("test");
     let payload = { username: this.props.currentUsername };
     const res = await fetch(
-      `http://54.89.224.32:5001/api/topics/upvote/${this.props._id}`,
+      `https://williamdoes.dev/upvotes/api/topics/upvote/${this.props._id}`,
       {
         method: "POST",
         headers: {
