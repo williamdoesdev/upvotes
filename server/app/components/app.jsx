@@ -23,30 +23,35 @@ export default class App extends Component {
 
   render() {
     return (
-      <Helmet>
-        <title>Upvotes</title>
-        <meta name="description" content="Sign in and vote on which things are the best!" />
-      </Helmet>
-      <main className="container">
-        <div className="header">
-          <h1>Upvotes!</h1>
-          <p>Sign in and vote on which things are the best!</p>
-        </div>
-        <UserPanel onPassUser={this.handlePassUser} />
-        <div className="categoryFlexContainer">
-          {this.state.categories.map((category) => (
-            <Category
-              key={category._id}
-              name={category.name}
-              description={category.description}
-              _id={category._id}
-              onNewTopic={this.handleNewTopic}
-              currentUsername={this.state.user.username}
-            />
-          ))}
-        </div>
-        <div className="categoryContainer">{this.renderAddCategory()}</div>
-      </main>
+      <React.Fragment>
+        <Helmet>
+          <title>Upvotes</title>
+          <meta
+            name="description"
+            content="Sign in and vote on which things are the best!"
+          />
+        </Helmet>
+        <main className="container">
+          <div className="header">
+            <h1>Upvotes!</h1>
+            <p>Sign in and vote on which things are the best!</p>
+          </div>
+          <UserPanel onPassUser={this.handlePassUser} />
+          <div className="categoryFlexContainer">
+            {this.state.categories.map((category) => (
+              <Category
+                key={category._id}
+                name={category.name}
+                description={category.description}
+                _id={category._id}
+                onNewTopic={this.handleNewTopic}
+                currentUsername={this.state.user.username}
+              />
+            ))}
+          </div>
+          <div className="categoryContainer">{this.renderAddCategory()}</div>
+        </main>
+      </React.Fragment>
     );
   }
 
