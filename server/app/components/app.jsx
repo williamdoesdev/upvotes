@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Category from "./category.jsx";
 import AddCategory from "./addCategory.jsx";
 import UserPanel from "./userPanel.jsx";
+import { Helmet } from "react-helmet";
 
 export default class App extends Component {
   constructor(props) {
@@ -22,6 +23,10 @@ export default class App extends Component {
 
   render() {
     return (
+      <Helmet>
+        <title>Upvotes</title>
+        <meta name="description" content="Sign in and vote on which things are the best!" />
+      </Helmet>
       <main className="container">
         <div className="header">
           <h1>Upvotes!</h1>
